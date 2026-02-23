@@ -13,6 +13,12 @@
         android:theme="@style/Theme.PlaceActivity"
         tools:targetApi="31">
         <activity
+            android:name=".secondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashActivity"
+            android:exported="false" />
+        <activity
             android:name=".top_curve"
             android:exported="false" />
         <activity
