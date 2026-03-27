@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/student"
+        android:title="Students"
+        android:icon="@drawable/baseline_student_24"/>
+
+    <item
+        android:id="@+id/attendance"
+        android:title="Attendance"
+        android:icon="@drawable/baseline_attendance_turned_in_24"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_profile_reg_24"/>
+
+</menu>

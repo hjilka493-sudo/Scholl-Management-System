@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#F57C00"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESULT"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <!-- Scroll Content -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- First Terminal Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFirstTerminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/firstTerminalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/txtFirstTerminal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Terminal"
+                        android:textColor="#F57C00"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/viewFirstResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#CFCFCF"/>
+
+                    <Button
+                        android:id="@+id/btnPublishFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PUBLISH"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#F57C00"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Second Terminal Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSecondTerminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/secondTerminalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/txtSecondTerminal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second Terminal"
+                        android:textColor="#F57C00"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:id="@+id/viewSecondResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#CFCFCF"/>
+
+                    <Button
+                        android:id="@+id/btnPublishSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PUBLISH"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#F57C00"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

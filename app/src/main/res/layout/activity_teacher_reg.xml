@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- TOP HALF CIRCLE HEADER -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:clipChildren="false">
+
+
+            <View
+                android:layout_width="600dp"
+                android:layout_height="600dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-380dp"
+                android:background="@drawable/top_teacher_bg"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+
+
+                <!-- ✅ FIXED ImageView -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/teacher_logo" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Teacher Registration Form"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <!-- PROFILE PHOTO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-70dp">
+
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/circle_photo_t_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_input_add" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Photo"
+                    android:textSize="12sp"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- FORM FIELDS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="20dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your Name"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your Subject"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your Section"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your Language"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter the Password"
+                android:inputType="textPassword"
+                android:background="@drawable/eddittext_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="25dp"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:background="@drawable/button_bg"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
