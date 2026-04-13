@@ -23,8 +23,8 @@
         <ImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:tint="#FFFFFF"/>
+            android:src="@drawable/homework"
+            />
 
         <TextView
             android:id="@+id/txtHomework"
@@ -61,7 +61,6 @@
                 android:id="@+id/txtSubject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Math_2078/48 <homework file name>"
                 android:textColor="#2A5DB0"
                 android:textSize="13sp"
                 android:layout_marginBottom="10dp"/>
@@ -80,14 +79,15 @@
             <!-- Download Button -->
 
             <Button
-                android:id="@+id/btnDownload"
+                android:id="@+id/btnPublishFirst"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Download your homework"
+                android:text="PUBLISH"
+                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:backgroundTint="#FF8A00"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"/>
+                android:backgroundTint="#F57C00"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"/>
 
 
 

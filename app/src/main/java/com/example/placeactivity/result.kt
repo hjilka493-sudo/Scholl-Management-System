@@ -36,5 +36,7 @@ class Result : AppCompatActivity() {
             Toast.makeText(this, "Second Terminal Result Published", Toast.LENGTH_SHORT).show()
 
         }
+
+
     }
 }

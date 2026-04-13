@@ -1,41 +1,42 @@
 package com.example.placeactivity
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.placeactivity.databinding.ActivityStudentLoginBinding
 
 class activity_student_login : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityStudentLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_student_login)
 
-        binding = ActivityStudentLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val  txt = findViewById<TextView>(R.id.tv_wel)
 
-        setSupportActionBar(binding.toolbar)
+        val homeworkLayout = findViewById<LinearLayout>(R.id.homework_layout)
+        val resultLayout = findViewById<LinearLayout>(R.id.result_layout)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_activity_student_login)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+        // Homework Click
+        homeworkLayout.setOnClickListener {
+
+            val intent = Intent(this, activity_homework_s::class.java)
+            startActivity(intent)
+
         }
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_activity_student_login)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+        // Result Click
+        resultLayout.setOnClickListener {
+
+            val intent = Intent(this, result_s::class.java)
+            startActivity(intent)
+
+        }
+
+
     }
 }

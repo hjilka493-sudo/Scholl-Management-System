@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EDEDED">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F58220"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notice"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Event Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_details"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+        <!-- Event Box -->
+        <EditText
+            android:id="@+id/event_details"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/event_box"
+            android:gravity="top"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Write event details"
+            android:inputType="textMultiLine"/>
+
+        <!-- Upload Image Button -->
+        <Button
+            android:id="@+id/upload_image"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/upload"
+            android:background="#F58220"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+    <!-- Send Button -->
+    <Button
+        android:id="@+id/send_event"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/send"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="#F58220"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>

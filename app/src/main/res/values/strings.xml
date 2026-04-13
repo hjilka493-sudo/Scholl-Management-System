@@ -6,6 +6,16 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+
+    <string name="notice">NOTICE AND EVENTS</string>
+    <string name="event_details">Event Details</string>
+    <string name="upload">Upload Image</string>
+    <string name="send">Send</string>
+
+
+
+
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
@@ -43,3 +53,4 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 </resources>
+

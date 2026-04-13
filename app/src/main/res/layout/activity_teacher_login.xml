@@ -47,6 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/tv_wel"
                     android:text="Welcome Message →"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
@@ -75,6 +76,7 @@
 
                 <!-- Attendance -->
                 <LinearLayout
+                    android:id="@+id/menu_attendance"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -96,8 +98,10 @@
                         android:layout_marginTop="6dp"/>
                 </LinearLayout>
 
+
                 <!-- Homework -->
                 <LinearLayout
+                    android:id="@+id/menu_homework"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -119,8 +123,10 @@
                         android:layout_marginTop="6dp"/>
                 </LinearLayout>
 
+
                 <!-- Result -->
                 <LinearLayout
+                    android:id="@+id/menu_result"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -142,8 +148,10 @@
                         android:layout_marginTop="6dp"/>
                 </LinearLayout>
 
+
                 <!-- Add Account -->
                 <LinearLayout
+                    android:id="@+id/menu_add_account"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
@@ -164,7 +172,6 @@
                         android:text="Add Account"
                         android:layout_marginTop="6dp"/>
                 </LinearLayout>
-
                 <!-- Event -->
                 <LinearLayout
                     android:layout_width="0dp"
@@ -177,9 +184,9 @@
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:background="@drawable/menu_box_t_log"
+                        android:src="@drawable/event"
                         android:padding="18dp"
-                        android:src="@drawable/ic_event"/>
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"

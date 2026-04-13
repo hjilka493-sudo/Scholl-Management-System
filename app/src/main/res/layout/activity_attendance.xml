@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,8 +18,8 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-          android:src="@drawable/atten"
-            android:tint="#FFFFFF"/>
+            android:src="@drawable/atten"
+            />
 
         <TextView
             android:layout_marginStart="12dp"
@@ -29,75 +30,95 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-
     <!-- CLASS + DATE -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFA726"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <!-- CLASS SPINNER -->
+        <Spinner
+            android:id="@+id/classSpinner"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown"/>
+        <!-- DATE TEXT -->
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFA726"
-        android:gravity="center_vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_weight="1"
-            android:text="Class : 3 A"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="Date: 12/12/21"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <!-- TABLE HEADER -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:orientation="horizontal"
         android:background="#E0E0E0"
         android:gravity="center_vertical"
-        android:padding="16dp">
+        android:weightSum="4"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
 
+        <!-- Student Name -->
         <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Student Name"
             android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:gravity="start"/>
 
+        <!-- Present -->
         <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Present"
-            android:gravity="center"
             android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:gravity="center"/>
 
+        <!-- Absent -->
         <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Absent"
-            android:gravity="center"
             android:textStyle="bold"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:gravity="center"/>
+
     </LinearLayout>
 
-    <!-- LIST -->
+    <!-- STUDENT LIST -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <!-- ROW 1 -->
+            <!-- SAMPLE ROW -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -112,55 +133,29 @@
                     android:layout_height="wrap_content"/>
 
                 <CheckBox
-                    android:id="@+id/present1"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
 
                 <CheckBox
-                    android:id="@+id/absent1"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
-            <!-- ROW 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center_vertical"
-                android:padding="16dp"
-                android:background="#FFFFFF">
-
-                <TextView
-                    android:layout_weight="2"
-                    android:text="Prajesh Shakya"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:id="@+id/present2"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:id="@+id/absent2"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <!-- 👉 COPY MORE ROWS SAME WAY -->
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- BOTTOM NAV -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!-- SUBMIT BUTTON -->
+    <Button
+        android:id="@+id/submitBtn"
+        android:text="Submit Attendance"
+        android:layout_margin="16dp"
+        android:backgroundTint="#F57C00"
+        android:textColor="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        app:menu="@menu/bottom_menu"/>
+        android:layout_height="50dp"/>
+
+
 
 </LinearLayout>
